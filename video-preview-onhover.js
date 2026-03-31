@@ -3,7 +3,7 @@ require( './video-preview-onhover.css' )
 /**
  * Expired from: https://github.com/Gyanreyer/hover-video-player
  */
-export function VideoPreviewOnhover( videoTargets )
+export function VideoPreviewOnhover( videoTargets, options = {} )
 {
     for ( const hoverTarget of videoTargets ) {
         hoverTarget.addEventListener( "mouseenter", onHover );
