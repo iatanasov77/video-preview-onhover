@@ -20,25 +20,25 @@ Import this library into your site/app with `import { VideoPreviewOnhover } from
 <details open>
     <summary>Vanilla HTML</summary>
     
-    ```
-        <a href="/path/to/open/on/click" class="vanila_js_video_preview">
-            <video src="/path/to/video/preview" muted loop playsinline style="display: none;"></video>
-            
-            <img
-                src="/path/to/video/thumbnail"
-                class="vanila_js_video_poster"
-            />
-        </a>
-    ```
+```html
+    <a href="/path/to/open/on/click" class="vanila_js_video_preview">
+        <video src="/path/to/video/preview" muted loop playsinline style="display: none;"></video>
+        
+        <img
+            src="/path/to/video/thumbnail"
+            class="vanila_js_video_poster"
+        />
+    </a>
+```
 </details>
 
 <details open>
     <summary>Vanilla HTML</summary>
     
-    ```
-        import { VideoPreviewOnhover } from '@vankosoft/video-preview-onhover'
-        
-        const videoTargets = document.getElementsByClassName( "vanila_js_video_preview" );
-        VideoPreviewOnhover( videoTargets, {} );
-    ```
+```javascript
+    import { VideoPreviewOnhover } from '@vankosoft/video-preview-onhover'
+    
+    const videoTargets = document.getElementsByClassName( "vanila_js_video_preview" );
+    VideoPreviewOnhover( videoTargets, {} );
+```
 </details>
