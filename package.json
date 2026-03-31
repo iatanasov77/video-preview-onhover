@@ -1,0 +1,23 @@
+{
+    "name": "@vankosoft/video-preview-onhover",
+    "version": "0.1.0",
+    "description": "Preview a Video when On Hover of an Image.",
+    "main": "video-preview-onhover.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iatanasov77/video-preview-onhover.git"
+    },
+    "keywords": [
+        "jquery",
+        "easyui"
+    ],
+    "author": "iatanasov77",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/iatanasov77/video-preview-onhover/issues"
+    },
+    "homepage": "https://github.com/iatanasov77/video-preview-onhover#readme"
+}

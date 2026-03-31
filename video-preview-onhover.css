@@ -1,0 +1,9 @@
+a.vanila_js_video_preview {
+    display: inline-block;
+    position: relative;
+}
+
+a.vanila_js_video_preview > video {
+    display: block;
+    width: 100%;
+}
