@@ -33,7 +33,7 @@ Import this library into your site/app with `import { VideoPreviewOnhover } from
 </details>
 
 <details open>
-    <summary>Vanilla HTML</summary>
+    <summary>Java Script</summary>
     
 ```javascript
 import { VideoPreviewOnhover } from '@vankosoft/video-preview-onhover'
