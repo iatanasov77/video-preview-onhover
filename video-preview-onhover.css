@@ -6,4 +6,6 @@ a.vanila_js_video_preview {
 a.vanila_js_video_preview > video {
     display: block;
     width: 100%;
+    position: relative;
+    z-index: 99999;
 }
