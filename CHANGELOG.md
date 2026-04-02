@@ -1,3 +1,9 @@
+1.0.2	|	Release date: **02.04.2026**
+============================================
+* Bug-Fixes and Improvements:
+  - Improve Event Listeners.
+
+
 1.0.1	|	Release date: **02.04.2026**
 ============================================
 * Bug-Fixes and Improvements:
