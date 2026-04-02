@@ -11,11 +11,11 @@ require( './video-preview-onhover.css' )
 export function VideoPreviewOnhover( videoTargets, options = {} )
 {
     for ( const hoverTarget of videoTargets ) {
-        hoverTarget.addEventListener( "mouseenter", onHover, options );
-        hoverTarget.addEventListener( "mouseleave", onBlur, options );
-        hoverTarget.addEventListener( "focus", onHover, options );
-        hoverTarget.addEventListener( "blur", onBlur, options );
-        hoverTarget.addEventListener( "touchstart", onHover, {
+        hoverTarget.addEventListener( "mouseenter", function ( event ) { onHover( options ) } );
+        hoverTarget.addEventListener( "mouseleave", function ( event ) { onBlur( options ) } );
+        hoverTarget.addEventListener( "focus", function ( event ) { onHover( options ) } );
+        hoverTarget.addEventListener( "blur", function ( event ) { onBlur( options ) } );
+        hoverTarget.addEventListener( "touchstart", function ( event ) { onHover( options ) }, {
             passive: true,
         });
     }
@@ -24,7 +24,7 @@ export function VideoPreviewOnhover( videoTargets, options = {} )
 /**
  * Handler for hover events on hover target
  */
-function onHover( event, options )
+function onHover( options )
 {
     const video = this.getElementsByTagName( 'video' )[0];
     const poster = this.getElementsByTagName( 'img' )[0];
@@ -35,7 +35,8 @@ function onHover( event, options )
 /**
  * Handler for blur events on hover target
  */
-function onBlur( event, options ) {
+function onBlur( options )
+{
     const video = this.getElementsByTagName( 'video' )[0];
     const poster = this.getElementsByTagName( 'img' )[0];
     
