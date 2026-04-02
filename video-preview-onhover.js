@@ -11,11 +11,11 @@ require( './video-preview-onhover.css' )
 export function VideoPreviewOnhover( videoTargets, options = {} )
 {
     for ( const hoverTarget of videoTargets ) {
-        hoverTarget.addEventListener( "mouseenter", function ( event ) { onHover( options ) } );
-        hoverTarget.addEventListener( "mouseleave", function ( event ) { onBlur( options ) } );
-        hoverTarget.addEventListener( "focus", function ( event ) { onHover( options ) } );
-        hoverTarget.addEventListener( "blur", function ( event ) { onBlur( options ) } );
-        hoverTarget.addEventListener( "touchstart", function ( event ) { onHover( options ) }, {
+        hoverTarget.addEventListener( "mouseenter", function ( event ) { onHover( hoverTarget, options ) } );
+        hoverTarget.addEventListener( "mouseleave", function ( event ) { onBlur( hoverTarget, options ) } );
+        hoverTarget.addEventListener( "focus", function ( event ) { onHover( hoverTarget, options ) } );
+        hoverTarget.addEventListener( "blur", function ( event ) { onBlur( hoverTarget, options ) } );
+        hoverTarget.addEventListener( "touchstart", function ( event ) { onHover( hoverTarget, options ) }, {
             passive: true,
         });
     }
@@ -24,10 +24,10 @@ export function VideoPreviewOnhover( videoTargets, options = {} )
 /**
  * Handler for hover events on hover target
  */
-function onHover( options )
+function onHover( hoverTarget, options )
 {
-    const video = this.getElementsByTagName( 'video' )[0];
-    const poster = this.getElementsByTagName( 'img' )[0];
+    const video = hoverTarget.getElementsByTagName( 'video' )[0];
+    const poster = hoverTarget.getElementsByTagName( 'img' )[0];
     
     startPreview( video, poster );
 }
@@ -35,10 +35,10 @@ function onHover( options )
 /**
  * Handler for blur events on hover target
  */
-function onBlur( options )
+function onBlur( hoverTarget, options )
 {
-    const video = this.getElementsByTagName( 'video' )[0];
-    const poster = this.getElementsByTagName( 'img' )[0];
+    const video = hoverTarget.getElementsByTagName( 'video' )[0];
+    const poster = hoverTarget.getElementsByTagName( 'img' )[0];
     
     var restartOnPause = options.restartOnPause || false;
     stopPreview( video, poster, restartOnPause );
