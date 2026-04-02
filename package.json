@@ -1,6 +1,6 @@
 {
     "name": "@vankosoft/video-preview-onhover",
-    "version": "0.1.2",
+    "version": "1.0.0",
     "description": "Preview a Video when On Hover of an Image.",
     "main": "video-preview-onhover.js",
     "scripts": {
