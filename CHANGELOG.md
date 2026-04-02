@@ -1,3 +1,9 @@
+1.0.0	|	Release date: **02.04.2026**
+============================================
+* New Features:
+  - Add an Option.
+
+
 0.1.2	|	Release date: **01.04.2026**
 ============================================
 * New Features and Improvements:
