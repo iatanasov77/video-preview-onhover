@@ -1,4 +1,4 @@
-require( './video-preview-onhover.css' )
+require( './video-preview-onhover.css' );
 
 /**
  * Expired from: https://github.com/Gyanreyer/hover-video-player
@@ -47,8 +47,10 @@ function onBlur( hoverTarget, options )
 function startPreview( video, poster )
 {
     video.muted = true;
+    
 //     video.currentTime = 1;
 //     video.playbackRate = 0.5;
+
     video.play();
     
     video.style.display = '';
